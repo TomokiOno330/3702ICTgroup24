@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ExplodingEnemy : MonoBehaviour
 {
+    public PlayerHealth playerhealth;
     //Variables
     public Transform target;
     public float speed = 2f;
@@ -13,10 +14,14 @@ public class ExplodingEnemy : MonoBehaviour
     public float explosionForce = 5f;
     public float radius = 2f;
 
+    public AudioClip explode;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        playerhealth = FindObjectOfType<PlayerHealth>();  
+        Debug.Log(playerhealth.curHealth);
         rig = GetComponent<Rigidbody>();
     }
 
@@ -46,7 +51,9 @@ public class ExplodingEnemy : MonoBehaviour
                 rigB.AddExplosionForce(explosionForce, transform.position, radius, 1f, ForceMode.Impulse);
         }
         Instantiate(explosionEffect, transform.position, transform.rotation);
+        playerhealth.curHealth -= 80;
         Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(explode, transform.position);
         Debug.Log("Player Damaged");
     }
 }

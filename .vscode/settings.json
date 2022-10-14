@@ -61,6 +61,7 @@
         "playerhealth",
         "previoustime",
         "Raycast",
-        "scoremanager"
+        "scoremanager",
+        "Slerp"
     ]
 }

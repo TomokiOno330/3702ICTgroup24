@@ -720,11 +720,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36fc243c09eedd5428dbefc0dc29f746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerhealth: {fileID: 0}
   target: {fileID: 0}
   speed: 12
   explosionEffect: {fileID: 5466427287246835548, guid: 21b516dba23b4e74dbfd9c19e346f1f1, type: 3}
   explosionForce: 5
   radius: 2
+  explode: {fileID: 8300000, guid: 02b22d3f387057c4db69179480ad6612, type: 3}
 --- !u!114 &4039577860970081099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,9 +739,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328b099420bef3a469c0847aa15f989c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectHP: 5
+  objectHealth: 0
   itemPrefabs: []
-  scoreValue: 50
+  number3: 0
 --- !u!1 &4039577859069994043
 GameObject:
   m_ObjectHideFlags: 0
